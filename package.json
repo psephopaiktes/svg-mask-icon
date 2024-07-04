@@ -1,6 +1,6 @@
 {
   "name": "svg-mask-icon",
-  "version": "1.0.0",
+  "version": "0.0.9",
   "description": "By using SVG files as masks, you can manage icon colors with CSS.",
   "main": "dist/svg-mask-icon.js",
   "keywords": ["svg", "mask", "icon", "css"],
