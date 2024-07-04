@@ -5,7 +5,7 @@ This is a Web Component that uses [CSS mask-image](https://developer.mozilla.org
 <br />
 
 ## Features
-- Bundle size under 20kb
+- Bundle size is about 1kb.
 - Ability to change color and size using CSS
 
 <br />
@@ -53,7 +53,7 @@ import "svg-mask-icon";
 
 ### or
 
-download [dist/svg-mask-icon.js](dist/svg-mask-icon.js).
+download [./dist/svg-mask-icon.js](./dist/svg-mask-icon.js).
 
 ```html
 <script type="module" src="svg-mask-icon.js"></script>
