@@ -11,7 +11,7 @@ This is a Web Component that uses [CSS mask-image](https://developer.mozilla.org
 <br />
 
 ## Preview
-[Demo Page.]()
+[Demo Page.](https://psephopaiktes.github.io/svg-mask-icon/)
 
 <br />
 
