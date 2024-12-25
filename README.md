@@ -10,10 +10,10 @@ This is a Web Component that uses [CSS mask-image](https://developer.mozilla.org
 - Bundle size is about 1kb.
 - Ability to change color and size using CSS
 
-<!-- <br />
+<br />
 
 ## Preview
-[Demo Page.](https://psephopaiktes.github.io/svg-mask-icon/) -->
+[Demo Page.](https://psephopaiktes.github.io/svg-mask-icon/)
 
 <br />
 
@@ -55,10 +55,10 @@ import "svg-mask-icon";
 
 ### or
 
-download [./dist/svg-mask-icon.js](./dist/svg-mask-icon.js).
-
+1. download [./dist/svg-mask-icon.js](./dist/svg-mask-icon.js).
+2. load script in your html.
 ```html
-<script type="module" src="svg-mask-icon.js"></script>
+<script type="module" src="svg-mask-icon.js" defer></script>
 ```
 
 <br />
