@@ -1,14 +1,18 @@
 # svg-mask-icon
 
+English | [日本語](README.ja.md)
+
 ![Cover](./public/cover.png)
 
 Very simple **Web Components** that uses [CSS mask-image](https://developer.mozilla.org/docs/Web/CSS/mask-image). It allows you to specify the color of local SVG icons using CSS, similar to icon fonts.
 
 <br />
 
-## Features
-- Bundle size is about 1kb.
-- Ability to change color and size using CSS
+## Table of Contents
+- [Preview](#preview)
+- [Comparison](#comparison)
+- [Installation](#installation)
+- [Usage](#usage)
 
 <br />
 
@@ -18,8 +22,6 @@ Very simple **Web Components** that uses [CSS mask-image](https://developer.mozi
 <br />
 
 ## Comparison
-
-### Matrix
 
  \ | &lt;svg-mask-icon&gt; | &lt;img&gt; | Icon Font | &lt;svg&gt; | SVG Sprite 
 --:|:--:|:--:|:--:|:--:|:--:
@@ -70,20 +72,10 @@ import "svg-mask-icon";
 <svg-mask-icon src="icon.svg" />
 ```
 
-### Used as a decorative image:
-```html
-<svg-mask-icon
-    src="icon.svg"
-    role="presentation"
-    aria-hiden="true"
-></svg-mask-icon>
-```
-
 ### Used as an image with alt text:
 ```html
 <svg-mask-icon
     src="icon.svg"
-    role="img"
     aria-label="Text Label"
 ></svg-mask-icon>
 ```
@@ -91,6 +83,14 @@ or
 ```html
 <svg-mask-icon
     src="icon.svg"
-    role="img"
->Text Label(hidden)</svg-mask-icon>
+>Text Label (hidden)</svg-mask-icon>
+```
+
+### Used as a decorative image:
+```html
+<svg-mask-icon
+    src="icon.svg"
+    role="presentation"
+    aria-hiden="true"
+></svg-mask-icon>
 ```
