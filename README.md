@@ -32,16 +32,16 @@ Very simple **Web Components** that uses [CSS mask-image](https://developer.mozi
  **browser translate** | ✅ | ✅ | - | ✅ | ✅
  **A11y label**        | ✅ | ✅ | ✅ | - | -
 
-### 🏞️ &lt;img src="icon.svg" /&gt;
+### &lt;img src="icon.svg" /&gt;
 When using the `img` tag, you cannot change the color of the icon using CSS.
 
-### 🅰️ Icon Font
+### Icon Font
 This method uses font data like [Material Symbol](https://fonts.google.com/icons) or [Font Awesome](https://fontawesome.com/). It has a complex build process. It has display issues when using browser translation.
 
-### 🖋️ &lt;svg&gt;...&lt;/svg&gt;
+### &lt;svg&gt;...&lt;/svg&gt;
 Method of directly writing the `svg` tag. It can make the HTML complex and inconvenient. Also, it cannot be managed in the form of `.svg` files.
 
-### 📁 SVG Sprite
+### SVG Sprite
 This is the method of creating an SVG sprite and specifying it using `<use>`. It has a complicated build process and is difficult to handle accessibility features like `aria-label`.
 
 <br />
