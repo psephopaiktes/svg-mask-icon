@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit';
 
 export class SvgMaskIcon extends LitElement {
-  static  properties = {
+  static properties = {
     src: { type: String },
     role: { type: String },
   };
