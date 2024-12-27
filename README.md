@@ -2,7 +2,7 @@
 
 ![Cover](./public/cover.png)
 
-This is a Web Component that uses [CSS mask-image](https://developer.mozilla.org/docs/Web/CSS/mask-image). It allows you to specify the color of local SVG icons using CSS, similar to icon fonts.
+Very simple **Web Components** that uses [CSS mask-image](https://developer.mozilla.org/docs/Web/CSS/mask-image). It allows you to specify the color of local SVG icons using CSS, similar to icon fonts.
 
 <br />
 
@@ -34,10 +34,10 @@ This is a Web Component that uses [CSS mask-image](https://developer.mozilla.org
 When using the `img` tag, you cannot change the color of the icon using CSS.
 
 ### 🅰️ Icon Font
-This method uses font data like [Material Symbol](https://fonts.google.com/icons) or [Font Awesome](https://fontawesome.com/). It has a complex build process and may cause display issues when using browser translation.
+This method uses font data like [Material Symbol](https://fonts.google.com/icons) or [Font Awesome](https://fontawesome.com/). It has a complex build process. It has display issues when using browser translation.
 
-### 🖋️ &lt;svg /&gt;...&lt;/svg&gt;
-This is the method of directly writing the `svg` tag. It can make the HTML complex and inconvenient. Also, it cannot be managed in the form of `.svg` files.
+### 🖋️ &lt;svg&gt;...&lt;/svg&gt;
+Method of directly writing the `svg` tag. It can make the HTML complex and inconvenient. Also, it cannot be managed in the form of `.svg` files.
 
 ### 📁 SVG Sprite
 This is the method of creating an SVG sprite and specifying it using `<use>`. It has a complicated build process and is difficult to handle accessibility features like `aria-label`.
@@ -55,7 +55,7 @@ import "svg-mask-icon";
 
 ### or
 
-1. download [./dist/svg-mask-icon.js](./dist/svg-mask-icon.js).
+1. download [./dist-cdn/svg-mask-icon.js](./dist-cdn/svg-mask-icon.js).
 2. load script in your html.
 ```html
 <script type="module" src="svg-mask-icon.js" defer></script>

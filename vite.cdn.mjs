@@ -9,10 +9,7 @@ export default defineConfig({
       fileName: () => 'svg-mask-icon.js',
       formats: ['es']
     },
-    outDir: 'dist-npm',
+    outDir: 'dist-cdn',
     emptyOutDir: true,
-    rollupOptions: {
-      external: ['lit']
-    },
   }
 });
