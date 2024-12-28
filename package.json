@@ -5,7 +5,12 @@
 	"type": "module",
 	"main": "dist-npm/svg-mask-icon.js",
 	"module": "dist-npm/svg-mask-icon.js",
-	"keywords": ["svg", "mask", "icon", "css"],
+	"keywords": [
+		"svg",
+		"mask",
+		"icon",
+		"css"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/psephopaiktes/svg-mask-icon.git"
