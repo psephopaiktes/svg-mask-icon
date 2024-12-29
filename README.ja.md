@@ -63,13 +63,20 @@ import "svg-mask-icon";
 <script type="module" src="svg-mask-icon.js"></script>
 ```
 
+### または
+CDNからスクリプトを読み込みます。
+```html
+<script type="module" src="https://cdn.jsdelivr.net/npm/svg-mask-icon/dist-cdn/svg-mask-icon.min.js"></script>
+```
+
+
 <br />
 
 ## 使い方
 
 ### 基本:
 ```html
-<svg-mask-icon src="icon.svg" />
+<svg-mask-icon src="icon.svg"></svg-mask-icon>
 ```
 
 ### altテキスト付きの画像として使用する場合:

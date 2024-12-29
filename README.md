@@ -63,13 +63,19 @@ import "svg-mask-icon";
 <script type="module" src="svg-mask-icon.js" defer></script>
 ```
 
+### or
+load script from CDN.
+```html
+<script type="module" src="https://cdn.jsdelivr.net/npm/svg-mask-icon/dist-cdn/svg-mask-icon.min.js"></script>
+```
+
 <br />
 
 ## Usage
 
 ### basic:
 ```html
-<svg-mask-icon src="icon.svg" />
+<svg-mask-icon src="icon.svg"></svg-mask-icon>
 ```
 
 ### Used as an image with alt text:
