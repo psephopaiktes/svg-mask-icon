@@ -2,7 +2,7 @@
 
 English | [日本語](README.ja.md)
 
-![Cover](./public/cover.png)
+![Cover](./public/cover.gif)
 
 Very simple **Web Components** that uses [CSS mask-image](https://developer.mozilla.org/docs/Web/CSS/mask-image). It allows you to specify the color of local SVG icons using CSS, similar to icon fonts.
 

@@ -2,7 +2,7 @@
 
 [English](README.md) | 日本語
 
-![カバー](./public/cover.png)
+![カバー](./public/cover.gif)
 
 [CSS mask-image](https://developer.mozilla.org/docs/Web/CSS/mask-image) を使用した非常にシンプルな**Web Components**です。CSSを使用してローカルの.svgファイルの色を指定でき、アイコンフォントと同様に使用できます。
 
