@@ -35,7 +35,6 @@ export class SvgMaskIcon extends LitElement {
       overflow: hidden;
       aspect-ratio: 1;
       mask-size: cover;
-      vertical-align: middle;
       background: currentColor;
     }
     div {
