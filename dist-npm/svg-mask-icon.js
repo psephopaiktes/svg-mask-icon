@@ -27,7 +27,6 @@ r(i, "properties", {
       overflow: hidden;
       aspect-ratio: 1;
       mask-size: cover;
-      vertical-align: middle;
       background: currentColor;
     }
     div {
