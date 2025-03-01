@@ -77,6 +77,11 @@ load script from CDN.
 ```html
 <svg-mask-icon src="icon.svg"></svg-mask-icon>
 ```
+Short hand: 
+```html
+<svg-icon src="icon.svg"></svg-icon>
+```
+
 
 ### Used as an image with alt text:
 ```html

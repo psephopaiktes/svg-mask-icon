@@ -8,9 +8,10 @@
   <script type="module" src="./dist-cdn/svg-mask-icon.js"></script>
   <style>
     body {
-      max-width: 640px;
+      max-width: 960px;
       margin: 64px auto;
       padding-inline: 32px;
+      font-size: 20px;
     }
 
     section {
@@ -25,6 +26,7 @@
     pre {
       background: #000;
       color: #fff;
+      overflow: scroll;
     }
 
     footer {
@@ -41,25 +43,25 @@
 
   <h2>code:</h2>
   <pre><code>
-      &lt;p style=&quot;color:red&quot;&gt;
-        &lt;svg-mask-icon src=&quot;./dist/flag.svg&quot;&gt;&lt;/svg-mask-icon&gt;
-        Current Color
-      &lt;/p&gt;
+  &lt;p style=&quot;color:red&quot;&gt;
+    &lt;svg-mask-icon src=&quot;./dist/flag.svg&quot;&gt;&lt;/svg-mask-icon&gt;
+    Current Color
+  &lt;/p&gt;
 
-      &lt;p&gt;
-        &lt;svg-mask-icon src=&quot;./dist/flag.svg&quot; style=&quot;background: linear-gradient(red,blue)&quot;&gt;&lt;/svg-mask-icon&gt;
-        Gradient
-      &lt;/p&gt;
+  &lt;p style=&quot;font-size:40px&quot;&gt;
+    &lt;!-- Short Hand --&gt;
+    &lt;svg-icon src=&quot;./dist/flag.svg&quot; style=&quot;background: linear-gradient(red,blue)&quot;&gt;&lt;/svg-icon&gt;
+    Gradient
+  &lt;/p&gt;
     </code></pre>
 
   <h2>preview:</h2>
   <p style="color:red">
-    <svg-mask-icon src="./dist-cdn/flag.svg"></svg-mask-icon>
+    <svg-icon src="./dist-cdn/flag.svg"></svg-icon>
     Current Color
   </p>
-  <p>
-    <svg-mask-icon aria-label="aaa" src="./dist-cdn/flag.svg"
-      style="background: linear-gradient(red,blue)"></svg-mask-icon>
+  <p style="font-size:40px">
+    <svg-icon aria-label="aaa" src="./dist-cdn/flag.svg" style="background: linear-gradient(red,blue)"></svg-icon>
     Gradient
   </p>
 

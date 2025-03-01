@@ -1,16 +1,16 @@
 var o = Object.defineProperty;
-var l = (e, t, s) => t in e ? o(e, t, { enumerable: !0, configurable: !0, writable: !0, value: s }) : e[t] = s;
-var r = (e, t, s) => l(e, typeof t != "symbol" ? t + "" : t, s);
-import { LitElement as n, html as a, css as c } from "lit";
-class i extends n {
+var n = (t, e, s) => e in t ? o(t, e, { enumerable: !0, configurable: !0, writable: !0, value: s }) : t[e] = s;
+var r = (t, e, s) => n(t, typeof e != "symbol" ? e + "" : e, s);
+import { LitElement as l, html as c, css as a } from "lit";
+class i extends l {
   constructor() {
     super(), this.src = "", this.role = "img";
   }
-  updated(t) {
-    super.updated(t), t.has("src") && (this.style.maskImage = `url(${this.src})`);
+  updated(e) {
+    super.updated(e), e.has("src") && (this.style.maskImage = `url(${this.src})`);
   }
   render() {
-    return a`
+    return c`
       <div
         translate="no"
         role="${this.role}"
@@ -20,22 +20,27 @@ class i extends n {
 r(i, "properties", {
   src: { type: String },
   role: { type: String }
-}), r(i, "styles", c`
+}), r(i, "styles", a`
     :host {
       display: inline-block;
-      width: 24px;
+      width: 1em;
       overflow: hidden;
       aspect-ratio: 1;
       mask-size: cover;
       background: currentColor;
+      vertical-align: -0.2em;
     }
     div {
       text-indent: 200%;
       white-space: nowrap;
-      font-size: 24px;
+      font-size: 1em;
     }
   `);
 customElements.define("svg-mask-icon", i);
+class d extends i {
+}
+customElements.define("svg-icon", d);
 export {
+  d as SvgIcon,
   i as SvgMaskIcon
 };

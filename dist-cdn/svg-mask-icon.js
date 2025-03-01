@@ -1,6 +1,6 @@
 var lt = Object.defineProperty;
 var at = (r, t, e) => t in r ? lt(r, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : r[t] = e;
-var M = (r, t, e) => at(r, typeof t != "symbol" ? t + "" : t, e);
+var k = (r, t, e) => at(r, typeof t != "symbol" ? t + "" : t, e);
 /**
  * @license
  * Copyright 2019 Google LLC
@@ -48,7 +48,7 @@ const ct = (r) => new st(typeof r == "string" ? r : r + "", void 0, V), dt = (r,
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const { is: $t, defineProperty: ut, getOwnPropertyDescriptor: _t, getOwnPropertyNames: ft, getOwnPropertySymbols: At, getPrototypeOf: mt } = Object, f = globalThis, K = f.trustedTypes, gt = K ? K.emptyScript : "", k = f.reactiveElementPolyfillSupport, b = (r, t) => r, D = { toAttribute(r, t) {
+const { is: $t, defineProperty: ut, getOwnPropertyDescriptor: _t, getOwnPropertyNames: ft, getOwnPropertySymbols: At, getPrototypeOf: mt } = Object, f = globalThis, K = f.trustedTypes, gt = K ? K.emptyScript : "", z = f.reactiveElementPolyfillSupport, b = (r, t) => r, D = { toAttribute(r, t) {
   switch (t) {
     case Boolean:
       r = r ? gt : null;
@@ -276,14 +276,14 @@ class y extends HTMLElement {
   firstUpdated(t) {
   }
 }
-y.elementStyles = [], y.shadowRootOptions = { mode: "open" }, y[b("elementProperties")] = /* @__PURE__ */ new Map(), y[b("finalized")] = /* @__PURE__ */ new Map(), k == null || k({ ReactiveElement: y }), (f.reactiveElementVersions ?? (f.reactiveElementVersions = [])).push("2.0.4");
+y.elementStyles = [], y.shadowRootOptions = { mode: "open" }, y[b("elementProperties")] = /* @__PURE__ */ new Map(), y[b("finalized")] = /* @__PURE__ */ new Map(), z == null || z({ ReactiveElement: y }), (f.reactiveElementVersions ?? (f.reactiveElementVersions = [])).push("2.0.4");
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const w = globalThis, N = w.trustedTypes, F = N ? N.createPolicy("lit-html", { createHTML: (r) => r }) : void 0, rt = "$lit$", _ = `lit$${Math.random().toFixed(9).slice(2)}$`, nt = "?" + _, yt = `<${nt}>`, g = document, P = () => g.createComment(""), x = (r) => r === null || typeof r != "object" && typeof r != "function", W = Array.isArray, vt = (r) => W(r) || typeof (r == null ? void 0 : r[Symbol.iterator]) == "function", z = `[ 	
-\f\r]`, S = /<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g, G = /-->/g, Q = />/g, A = RegExp(`>|${z}(?:([^\\s"'>=/]+)(${z}*=${z}*(?:[^ 	
+const w = globalThis, N = w.trustedTypes, F = N ? N.createPolicy("lit-html", { createHTML: (r) => r }) : void 0, rt = "$lit$", _ = `lit$${Math.random().toFixed(9).slice(2)}$`, nt = "?" + _, yt = `<${nt}>`, g = document, P = () => g.createComment(""), x = (r) => r === null || typeof r != "object" && typeof r != "function", W = Array.isArray, vt = (r) => W(r) || typeof (r == null ? void 0 : r[Symbol.iterator]) == "function", L = `[ 	
+\f\r]`, S = /<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g, G = /-->/g, Q = />/g, A = RegExp(`>|${L}(?:([^\\s"'>=/]+)(${L}*=${L}*(?:[^ 	
 \f\r"'\`<>=]|("|')|))|$)`, "g"), X = /'/g, Y = /"/g, ot = /^(?:script|style|textarea|title)$/i, Et = (r) => (t, ...e) => ({ _$litType$: r, strings: t, values: e }), St = Et(1), v = Symbol.for("lit-noChange"), d = Symbol.for("lit-nothing"), tt = /* @__PURE__ */ new WeakMap(), m = g.createTreeWalker(g, 129);
 function ht(r, t) {
   if (!W(r) || !r.hasOwnProperty("raw")) throw Error("invalid template strings array");
@@ -315,7 +315,7 @@ class U {
       if (i.nodeType === 1) {
         if (i.hasAttributes()) for (const l of i.getAttributeNames()) if (l.endsWith(rt)) {
           const $ = p[n++], u = i.getAttribute(l).split(_), T = /([.?@])?(.*)/.exec($);
-          h.push({ type: 1, index: o, name: T[2], strings: u, ctor: T[1] === "." ? Ct : T[1] === "?" ? Pt : T[1] === "@" ? xt : R }), i.removeAttribute(l);
+          h.push({ type: 1, index: o, name: T[2], strings: u, ctor: T[1] === "." ? Ct : T[1] === "?" ? Pt : T[1] === "@" ? xt : M }), i.removeAttribute(l);
         } else l.startsWith(_) && (h.push({ type: 6, index: o }), i.removeAttribute(l));
         if (ot.test(i.tagName)) {
           const l = i.textContent.split(_), $ = l.length - 1;
@@ -436,7 +436,7 @@ class H {
     this._$AM === void 0 && (this._$Cv = t, (e = this._$AP) == null || e.call(this, t));
   }
 }
-class R {
+class M {
   get tagName() {
     return this.element.tagName;
   }
@@ -461,7 +461,7 @@ class R {
     t === d ? this.element.removeAttribute(this.name) : this.element.setAttribute(this.name, t ?? "");
   }
 }
-class Ct extends R {
+class Ct extends M {
   constructor() {
     super(...arguments), this.type = 3;
   }
@@ -469,7 +469,7 @@ class Ct extends R {
     this.element[this.name] = t === d ? void 0 : t;
   }
 }
-class Pt extends R {
+class Pt extends M {
   constructor() {
     super(...arguments), this.type = 4;
   }
@@ -477,7 +477,7 @@ class Pt extends R {
     this.element.toggleAttribute(this.name, !!t && t !== d);
   }
 }
-class xt extends R {
+class xt extends M {
   constructor(t, e, s, i, o) {
     super(t, e, s, i, o), this.type = 5;
   }
@@ -502,8 +502,8 @@ class Ut {
     E(this, t);
   }
 }
-const L = w.litHtmlPolyfillSupport;
-L == null || L(U, H), (w.litHtmlVersions ?? (w.litHtmlVersions = [])).push("3.2.1");
+const I = w.litHtmlPolyfillSupport;
+I == null || I(U, H), (w.litHtmlVersions ?? (w.litHtmlVersions = [])).push("3.2.1");
 const Ht = (r, t, e) => {
   const s = (e == null ? void 0 : e.renderBefore) ?? t;
   let i = s._$litPart$;
@@ -548,7 +548,7 @@ C._$litElement$ = !0, C.finalized = !0, (et = globalThis.litElementHydrateSuppor
 const B = globalThis.litElementPolyfillSupport;
 B == null || B({ LitElement: C });
 (globalThis.litElementVersions ?? (globalThis.litElementVersions = [])).push("4.1.1");
-class I extends C {
+class R extends C {
   constructor() {
     super(), this.src = "", this.role = "img";
   }
@@ -563,25 +563,30 @@ class I extends C {
       ><slot></slot></div>`;
   }
 }
-M(I, "properties", {
+k(R, "properties", {
   src: { type: String },
   role: { type: String }
-}), M(I, "styles", dt`
+}), k(R, "styles", dt`
     :host {
       display: inline-block;
-      width: 24px;
+      width: 1em;
       overflow: hidden;
       aspect-ratio: 1;
       mask-size: cover;
       background: currentColor;
+      vertical-align: -0.2em;
     }
     div {
       text-indent: 200%;
       white-space: nowrap;
-      font-size: 24px;
+      font-size: 1em;
     }
   `);
-customElements.define("svg-mask-icon", I);
+customElements.define("svg-mask-icon", R);
+class Tt extends R {
+}
+customElements.define("svg-icon", Tt);
 export {
-  I as SvgMaskIcon
+  Tt as SvgIcon,
+  R as SvgMaskIcon
 };

@@ -31,18 +31,23 @@ export class SvgMaskIcon extends LitElement {
   static styles = css`
     :host {
       display: inline-block;
-      width: 24px;
+      width: 1em;
       overflow: hidden;
       aspect-ratio: 1;
       mask-size: cover;
       background: currentColor;
+      vertical-align: -0.2em;
     }
     div {
       text-indent: 200%;
       white-space: nowrap;
-      font-size: 24px;
+      font-size: 1em;
     }
   `;
 }
 
+
 customElements.define('svg-mask-icon', SvgMaskIcon);
+
+export class SvgIcon extends SvgMaskIcon { }
+customElements.define('svg-icon', SvgIcon);
