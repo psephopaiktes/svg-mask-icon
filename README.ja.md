@@ -78,26 +78,46 @@ CDNからスクリプトを読み込みます。
 ```html
 <svg-mask-icon src="icon.svg"></svg-mask-icon>
 ```
-
-### altテキスト付きの画像として使用する場合:
+またはショートハンドを使用:
 ```html
-<svg-mask-icon
+<svg-icon src="icon.svg" />
+```
+
+### 代替テキスト付きの画像として使用:
+```html
+<svg-icon
     src="icon.svg"
-    aria-label="テキストラベル"
-></svg-mask-icon>
+>テキストラベル (表示されません)</svg-icon>
 ```
 または
 ```html
-<svg-mask-icon
+<svg-icon
     src="icon.svg"
->テキストラベル（表示されません）</svg-mask-icon>
+    aria-label="テキストラベル"
+/></svg-icon>
+```
+または
+```html
+<svg-icon src="icon.svg" alt="テキストラベル">
 ```
 
-### 装飾画像として使用する場合:
+### 装飾用の画像として使用:
 ```html
-<svg-mask-icon
+<svg-icon
+    src="icon.svg"
+    role="presentation"
+/>
+```
+または代替テキストなし
+```html
+<svg-icon src="icon.svg" />
+```
+
+→ 次のようにレンダリングされます
+```html
+<svg-icon
     src="icon.svg"
     role="presentation"
     aria-hidden="true"
-></svg-mask-icon>
+/>
 ```

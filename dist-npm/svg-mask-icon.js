@@ -1,26 +1,30 @@
-var o = Object.defineProperty;
-var n = (t, e, s) => e in t ? o(t, e, { enumerable: !0, configurable: !0, writable: !0, value: s }) : t[e] = s;
-var r = (t, e, s) => n(t, typeof e != "symbol" ? e + "" : e, s);
-import { LitElement as l, html as c, css as a } from "lit";
-class i extends l {
+var a = Object.defineProperty;
+var l = (e, t, i) => t in e ? a(e, t, { enumerable: !0, configurable: !0, writable: !0, value: i }) : e[t] = i;
+var r = (e, t, i) => l(e, typeof t != "symbol" ? t + "" : t, i);
+import { LitElement as n, html as o, css as d } from "lit";
+class s extends n {
   constructor() {
-    super(), this.src = "", this.role = "img";
+    super(), this.src = "", this.role = "img", this.ariaHiden = "false";
   }
-  updated(e) {
-    super.updated(e), e.has("src") && (this.style.maskImage = `url(${this.src})`);
+  updated(t) {
+    super.updated(t), t.has("src") && (this.style.maskImage = `url(${this.src})`), t.has("alt") && this.setAttribute("aria-label", this.alt), t.has("role") && this.role === "presentation" && (this.ariaHidden = "true");
   }
   render() {
-    return c`
+    return o`
       <div
         translate="no"
         role="${this.role}"
+        aria-label="${this.alt}"
+        aria-hidden="${this.ariaHidden}"
       ><slot></slot></div>`;
   }
 }
-r(i, "properties", {
+r(s, "properties", {
   src: { type: String },
-  role: { type: String }
-}), r(i, "styles", a`
+  role: { type: String },
+  alt: { type: String },
+  ariaHidden: { type: String }
+}), r(s, "styles", d`
     :host {
       display: inline-block;
       width: 1em;
@@ -36,11 +40,11 @@ r(i, "properties", {
       font-size: 1em;
     }
   `);
-customElements.define("svg-mask-icon", i);
-class d extends i {
+customElements.define("svg-mask-icon", s);
+class c extends s {
 }
-customElements.define("svg-icon", d);
+customElements.define("svg-icon", c);
 export {
-  d as SvgIcon,
-  i as SvgMaskIcon
+  c as SvgIcon,
+  s as SvgMaskIcon
 };

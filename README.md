@@ -50,13 +50,12 @@ This is the method of creating an SVG sprite and specifying it using `<use>`. It
 ```bash
 npm i svg-mask-icon
 ```
-
+and
 ```js
 import "svg-mask-icon";
 ```
 
 ### or
-
 1. download [./dist-cdn/svg-mask-icon.js](./dist-cdn/svg-mask-icon.js).
 2. load script in your html.
 ```html
@@ -77,31 +76,47 @@ load script from CDN.
 ```html
 <svg-mask-icon src="icon.svg"></svg-mask-icon>
 ```
-Short hand: 
+or use Short hand:
 ```html
-<svg-icon src="icon.svg"></svg-icon>
+<svg-icon src="icon.svg" />
 ```
 
 
 ### Used as an image with alt text:
 ```html
-<svg-mask-icon
-    src="icon.svg"
-    aria-label="Text Label"
-></svg-mask-icon>
+<svg-icon
+  src="icon.svg"
+>Text Label (hidden)</svg-icon>
 ```
 or
 ```html
-<svg-mask-icon
-    src="icon.svg"
->Text Label (hidden)</svg-mask-icon>
+<svg-icon
+  src="icon.svg"
+  aria-label="Text Label"
+/></svg-icon>
+```
+or
+```html
+<svg-icon src="icon.svg" alt="Text Label">
 ```
 
 ### Used as a decorative image:
 ```html
-<svg-mask-icon
-    src="icon.svg"
-    role="presentation"
-    aria-hiden="true"
-></svg-mask-icon>
+<svg-icon
+  src="icon.svg"
+  role="presentation"
+/>
+```
+or No alt text
+```html
+<svg-icon src="icon.svg" />
+```
+
+→ It will be rendered like this
+```html
+<svg-icon
+  src="icon.svg"
+  role="presentation"
+  aria-hidden="true"
+/>
 ```

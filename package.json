@@ -1,33 +1,35 @@
 {
-	"name": "svg-mask-icon",
-	"version": "2.1.0",
-	"description": "By using SVG files as masks, you can manage icon colors with CSS.",
-	"type": "module",
-	"main": "dist-npm/svg-mask-icon.js",
-	"module": "dist-npm/svg-mask-icon.js",
-	"keywords": [
-		"svg",
-		"mask",
-		"icon",
-		"css"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/psephopaiktes/svg-mask-icon.git"
-	},
-	"license": "MIT",
-	"scripts": {
-		"start": "vite --open",
-		"dev": "vite",
-		"build-npm": "vite build",
-		"build-cdn": "vite build -c vite.cdn.mjs",
-		"build": "npm run build-npm && npm run build-cdn",
-		"preview": "vite preview"
-	},
-	"dependencies": {
-		"lit": "^3.2.1"
-	},
-	"devDependencies": {
-		"vite": "^6.0.5"
-	}
+  "name": "svg-mask-icon",
+  "version": "2.1.0",
+  "description": "By using SVG files as masks, you can manage icon colors with CSS.",
+  "type": "module",
+  "main": "dist-npm/svg-mask-icon.js",
+  "module": "dist-npm/svg-mask-icon.js",
+  "keywords": ["svg", "mask", "icon", "css"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psephopaiktes/svg-mask-icon.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "files": ["dist-npm"],
+  "scripts": {
+    "start": "vite --open",
+    "biome": "biome check --write",
+    "dev": "vite",
+    "build-npm": "npm run biome && tsc && vite build",
+    "build-cdn": "npm run biome && tsc && vite build -c vite.cdn.mjs",
+    "build": "npm run build-npm && npm run build-cdn",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lit": "^3.2.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
+  }
 }
